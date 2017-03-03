@@ -1,0 +1,17 @@
+.searchbox-sb-suggestion {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+
+
+
+  .searchbox-sb-suggestion-items {
+	& > * {
+	  cursor: pointer;
+	}
+
+  }
+}

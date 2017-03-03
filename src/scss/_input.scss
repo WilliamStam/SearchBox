@@ -1,0 +1,36 @@
+
+input[type='text'] {
+  display:none;
+
+}
+
+.searchbox-sb {
+  display: block;
+  width: 100%;
+
+  /* makes the contenteditable div perform like a normal selectbox */
+  white-space: pre-wrap;
+  overflow: hidden;
+
+  & br {
+	display: none;
+  }
+
+  & * {
+	display: inline;
+	white-space: pre-wrap;
+  }
+
+
+  span[data-sb-lookup] {
+	cursor: pointer;
+	> span {
+	  cursor: pointer;
+
+	}
+
+  }
+
+
+}
+

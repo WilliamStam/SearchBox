@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>WilliamStam/SearchBox DEMO</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<section>
+<h1>SearchBox</h1>
+		<input type="text" name="search" id="search" placeholder="Search" >
+
+</section>
+
+<h4>Available tags:</h4>
+<ul>
+	<li>type:</li>
+	<li>company:</li>
+</ul>
+<hr>
+<section>
+<h4>Current value</h4>
+	<div id="log"></div>
+
+</section>
+
+
+<!-- setting up the dependencies -->
+<script src="../vendor/components/jquery/jquery.js"></script>
+<script src="../vendor/ichord/caret/dist/jquery.caret.js"></script>
+<!-- --------- -->
+
+<!-- the plugins files -->
+<link rel="stylesheet" href="../dist/jquery.searchbox.css">
+<script src="../dist/jquery.searchbox.js"></script>
+<!-- --------- -->
+<script>
+	$(document).on("sb-change","#search",function(){
+		$("#log").html($("#search").val())
+	})
+	$(document).ready(function(){
+		$.getJSON( "data.json", function( data ) {
+			$("#search").searchbox({
+				"data":data
+			})
+		});
+	})
+</script>
+
+</body>
+</html>

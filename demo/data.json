@@ -1,0 +1,44 @@
+{
+  "type": {
+	"records": [
+	  {
+		"ID": "1",
+		"label": "Phone",
+		"cID": "1",
+		"toAscii": "phone"
+	  },
+	  {
+		"ID": "2",
+		"label": "Email",
+		"cID": "1",
+		"toAscii": "email"
+	  },
+	  {
+		"ID": "3",
+		"label": "Cold Call",
+		"cID": "1",
+		"toAscii": "cold-call"
+	  }
+	],
+	"field": "toAscii",
+	"template": "<div>@@label@@<\/div>"
+  },
+  "company": {
+	"records": [
+	  {
+		"ID": "1",
+		"company": "Impreshin",
+		"settings": [],
+		"toAscii": "impreshin"
+	  },
+	  {
+		"ID": "2",
+		"company": "Zoutnet",
+		"settings": [],
+		"toAscii": "zoutnet"
+	  }
+	],
+	"field": "toAscii",
+	"template": "<div>@@company@@<\/div>"
+  }
+}

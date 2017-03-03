@@ -1,0 +1,30 @@
+{
+  "name": "williamstam/searchbox",
+  "description": "A searchbox with auto-complete for select like behaviour",
+  "type": "library",
+  "authors": [
+	{
+	  "name": "William",
+	  "email": "william@impreshin.com"
+	}
+  ],
+  "minimum-stability": "dev",
+  "repositories": [
+	{
+	  "type": "package",
+	  "package": {
+		"name": "ichord/caret",
+		"version": "dev-master",
+		"source": {
+		  "url": "https://github.com/ichord/Caret.js",
+		  "type": "git",
+		  "reference": "origin/master"
+		}
+	  }
+	}
+  ],
+  "require": {
+	"components/jquery": "3.*",
+	"ichord/caret": "dev-master"
+  }
+}
