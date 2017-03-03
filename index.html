@@ -17,6 +17,15 @@
 <h1>SearchBox</h1>
 		<input type="text" name="search" id="search" placeholder="Search" >
 
+	<div>
+		load:
+		<button class="content-btn" type="button">type:email test company:xyz type:phone woof</button>
+		<button class="content-btn" type="button">type:email</button>
+		<button class="content-btn" type="button">test</button>
+		<button class="content-btn" type="button">type</button>
+		<button class="content-btn-blank" type="button">blank</button>
+	</div>
+
 </section>
 
 <h4>Available tags:</h4>
@@ -52,6 +61,22 @@
 				"data":data
 			})
 		});
+
+		$(document).on("click", ".content-btn", function () {
+			var c = $(this).text();
+			$("#search").val(c).trigger("change");
+
+
+		})
+
+		$(document).on("click", ".content-btn-blank", function () {
+			$("#search").val("").trigger("change");
+
+
+		})
+
+
+
 	})
 </script>
 
