@@ -238,11 +238,9 @@ gulp.task('update', gulp.series('composer-update', function (done) {
 	done();
 }));
 
-gulp.task('deploy', gulp.series('build', function (done) {
-	done();
-}));
-/*
+
+
 gulp.task('deploy', gulp.series('build', 'git-diff', 'git-commit', 'git-push', function (done) {
 	done();
 }));
-*/
+
