@@ -358,11 +358,9 @@ jQuery.fn.selectText = function (start, end) {
 
 							var results = $.grep(_this.options.data[lookup].records, function( n, i ) {
 								var text = n[_this.options.data[lookup]['field']].replace(/\s+/g, ' ').toLowerCase();
-
-
 								var ret = true;
 								if (val){
-									ret = text.indexOf(val)=!-1;
+									ret = text.indexOf(val)==-1?false:true;
 									console.log(ret)
 								}
 								console.log("VAL: "+val+" | TEXT:"+text+" | RET:"+ret+" | indexOf:"+text.indexOf(val))
@@ -373,14 +371,17 @@ jQuery.fn.selectText = function (start, end) {
 
 
 
-							console.log(results)
 
 
 
-							if (newval && (val == "")) {
+
+							if (newval ) {
 								console.log("new val:" + newval)
 
-								var stxt = str.slice(0, pos),
+								var this_pos = pos - val.length;
+
+
+								var stxt = str.slice(0, this_pos),
 									etxt = str.slice(pos + 1, str.length);
 
 
