@@ -164,8 +164,16 @@ gulp.task('set-build', function (done) {
 	}
 	done();
 });
+gulp.task('libs', function(done) {
+	gulp.src('./vendor/components/jquery/jquery.js')
+		.pipe(gulp.dest('./libs'));
+	gulp.src('./vendor/ichord/caret/dist/jquery.caret.js')
+		.pipe(gulp.dest('./libs'));
 
-gulp.task('build', gulp.series('set-build', gulp.parallel(['sass', 'javascript']), function (done) {
+	done();
+});
+
+gulp.task('build', gulp.series('set-build', gulp.parallel(['sass', 'javascript','libs']), function (done) {
 	done();
 }));
 
