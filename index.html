@@ -6,7 +6,7 @@
 	<title>WilliamStam/SearchBox DEMO</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="demo/style.css">
 
 </head>
 <body>
@@ -30,20 +30,20 @@
 
 
 <!-- setting up the dependencies -->
-<script src="../vendor/components/jquery/jquery.js"></script>
-<script src="../vendor/ichord/caret/dist/jquery.caret.js"></script>
+<script src="vendor/components/jquery/jquery.js"></script>
+<script src="vendor/ichord/caret/dist/jquery.caret.js"></script>
 <!-- --------- -->
 
 <!-- the plugins files -->
-<link rel="stylesheet" href="../dist/jquery.searchbox.css">
-<script src="../dist/jquery.searchbox.js"></script>
+<link rel="stylesheet" href="dist/jquery.searchbox.css">
+<script src="dist/jquery.searchbox.js"></script>
 <!-- --------- -->
 <script>
 	$(document).on("sb-change","#search",function(){
 		$("#log").html($("#search").val())
 	})
 	$(document).ready(function(){
-		$.getJSON( "data.json", function( data ) {
+		$.getJSON( "demo/data.json", function( data ) {
 			$("#search").searchbox({
 				"data":data
 			})
